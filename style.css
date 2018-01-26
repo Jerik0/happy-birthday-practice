@@ -8,4 +8,8 @@ html, body {
   align-items: center;
 }
 
-
+#konami-text {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
