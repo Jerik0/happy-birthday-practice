@@ -2,9 +2,13 @@
 
 (() => {
 
-  const konamiCode = [38,38,40,40,37,39,37,39];
+  const konamiCode = [38,38,40,40,37,39,37,39,66,65];
 
   const welcome = () => {
+
+  };
+
+  const secret = () => {
 
   };
 
@@ -18,6 +22,7 @@
         console.log(konamiMatch);
         if(konamiCode.every((e, i) => e === konamiMatch[i])) {
           console.log('woo');
+          secret();
         }
       } else {
         i = 0;
@@ -25,6 +30,8 @@
       }
     });
   };
+
+
 
   konamiCodeMatcher();
 
