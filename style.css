@@ -1,15 +1,46 @@
 html, body {
   box-sizing: border-box;
+  height: 100vh;
 }
 
 #container {
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
+  align-content: center;
+  height: 100%;
 }
 
 #konami-text {
   position: fixed;
   bottom: 0;
   right: 0;
+}
+
+#cake-body {
+  position: relative;
+  width: 400px;
+  height: 240px;
+  background-color: aqua;
+  border-bottom: 20%;
+}
+
+#candle-container {
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  bottom: 50px;
+  left: 25px;
+  width: 350px;
+  height: 200px;
+}
+
+.candle {
+  margin: 0 30px;
+  height: 100%;
+  width: 20px;
+  background-color: aquamarine;
 }

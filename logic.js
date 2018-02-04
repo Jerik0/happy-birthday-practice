@@ -21,7 +21,7 @@
         i++;
         console.log(konamiMatch);
         if(konamiCode.every((e, i) => e === konamiMatch[i])) {
-          console.log('woo');
+          hexGenerator();
           secret();
         }
       } else {
@@ -31,7 +31,21 @@
     });
   };
 
+  const hexGenerator = () => {
+    let hex = [];
+    let i=0;
+    do {
+      hex.push(randomNum(48,9));
+      i++;
+    } while (i<6);
+    hex.join('');
+    console.log(hex.join(''));
+    return hex;
+  };
 
+  const randomNum = (start, toNum) => {
+    return Math.floor((Math.random() * toNum) + start);
+  };
 
   konamiCodeMatcher();
 
