@@ -6,10 +6,6 @@
 
   const konamiCode = [38,38,40,40,37,39,37,39,66,65];
 
-  const welcome = () => {
-
-  };
-
   const secret = () => {
     cakeBody.classList.toggle('slide-down');
     happyBdayTxt.classList.toggle('slide-down-h1');
