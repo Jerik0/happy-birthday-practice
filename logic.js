@@ -15,10 +15,10 @@
     let konamiMatch = [];
     let i = 0;
     document.addEventListener('keydown', e => {
-      if(e.which === konamiCode[i]) {
+      if(e.which === konamiCode[i]) { //pressed key's value === current value at i index in konamiCode array?
         konamiMatch.push(e.which);
         i++;
-        if(konamiCode.every((el, i) => el === konamiMatch[i])) {
+        if(konamiCode.every((el, i) => el === konamiMatch[i])) { //match every value in both arrays
           setTimeout(() => {
             document.querySelector('#audio').play();
           }, 3000);
@@ -44,12 +44,12 @@
     let hex = ['#'];
     let hexChars = ['a', 'b', 'c', 'd', 'e', 'f'];
     for(let i=0; i<6; i++) {
-      let flag = Math.round(Math.random());
+      let flag = Math.round(Math.random()); // randomly pick 0 or 1
       let random;
-      flag ? random = randomNum(0,6) : random = hexChars[randomNum(0, hexChars.length-1)];
-      hex.push(random);
+      flag ? random = randomNum(0,9) : random = hexChars[randomNum(0, hexChars.length-1)]; //assign a number between 0-9, or a letter from a-f, depending on either 1 or 0 respectively.
+      hex.push(random); //push the newly assigned character/number into the hex array
     }
-    hex = hex.join('');
+    hex = hex.join(''); //join the hex array into a string
     return hex;
   };
 
