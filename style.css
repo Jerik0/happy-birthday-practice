@@ -3,6 +3,10 @@ html, body {
   height: 100vh;
 }
 
+audio {
+  display: none;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -19,11 +23,13 @@ html, body {
 }
 
 #cake-body {
+  box-shadow: 0 4px 5px black;
+  top: -400px;
   position: relative;
   width: 400px;
   height: 240px;
   background-color: aqua;
-  border-bottom: 20%;
+  border-radius: 10% 10% 20% 20%;
 }
 
 #candle-container {
@@ -38,9 +44,70 @@ html, body {
   height: 200px;
 }
 
+#happy-bday-text {
+  text-shadow: 4px 4px 5px black;
+  font-family: 'Roboto', sans-serif;
+  color: #f5fdfa;
+  position: relative;
+  top: -70px;
+}
+
 .candle {
   margin: 0 30px;
   height: 100%;
   width: 20px;
-  background-color: aquamarine;
+  background-color: #c7dde5;
+}
+
+.flame {
+  box-shadow: 0 4px 5px #3c3c3c;
+  animation-name: sway;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color: orange;
+  position: relative;
+  top: -20px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: orange;
+}
+
+.slide-down {
+  animation-name: moveCake;
+  animation-duration: 3s;
+}
+
+.slide-down-h1 {
+  animation-name: moveH1;
+  animation-duration: 3s;
+}
+
+@keyframes sway {
+  from {
+    left: -10px;
+  }
+  to {
+    left: 10px;
+  }
+}
+
+@keyframes moveCake {
+  from {
+    top: -400px;
+  }
+  to {
+    top: 50px;
+  }
+}
+
+@keyframes moveH1{
+  from {
+    top: -70px;
+  }
+  to {
+    top: 0;
+  }
 }
